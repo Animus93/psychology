@@ -1,0 +1,175 @@
+.admin-items-container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  /* gap: 10px; */
+  flex-direction: column;
+}
+.admin-items-title {
+  display: flex;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  font-family: "Exo 2", sans-serif;
+  font-size: 25px;
+  height: 60px;
+  width: 90%;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.admin-items-title:hover {
+  box-shadow: 1px 1px 13px rgba(142, 144, 243, 0.9);
+}
+.admin-items-content {
+  width: 100%;
+  height: fit-content;
+  grid-template-columns: repeat(auto-fill, 300px);
+  display: grid;
+  /* gap: 15px; */
+  padding: 30px 0;
+  grid-row-gap: 25px;
+  grid-column-gap: 15px;
+  justify-content: center;
+}
+.icon {
+  background-image: url("src/assets/icons/addButton.svg");
+  transition: 0.5s ease-in-out;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+}
+.admin-item-add:hover .icon {
+  transform: scale(1.3);
+}
+.admin-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* background-color: antiquewhite; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.4s ease-in-out;
+  border-radius: 15px;
+  padding: 5px;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.089);
+}
+.admin-item-add {
+  cursor: pointer;
+  padding: 5px;
+  min-width: 270px;
+  min-height: 330px;
+  width: 100%;
+  height: 100%;
+  /* background-color: antiquewhite; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.089);
+}
+
+.admin-item-img {
+  width: 270px;
+  height: 330px;
+  justify-self: center;
+  /* background-image: url('/assets/temp/8.jpg'); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: 0.5s ease-in-out;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 10px;
+}
+.admin-item-price {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 600;
+  margin: auto;
+  font-size: 14px;
+  transition: color 0.5s ease-in-out;
+  text-align: center;
+}
+.admin-item-title {
+  margin: auto;
+  font-size: 14px;
+  font-family: "Exo 2", sans-serif;
+  transition: color 0.5s ease-in-out;
+  text-align: center;
+}
+/* .admin-item:hover .admin-item-icons {
+    transform: scale(1.03);
+  } */
+.admin-item:hover,
+.admin-item-add:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.548);
+}
+.admin-item-description {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition-delay: 0.2s;
+  bottom: 90px;
+  width: 250px;
+  height: fit-content;
+  max-height: 310px;
+  overflow: hidden;
+  font-family: "Exo 2", sans-serif;
+  background-color: #f3d7bdc7;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  pointer-events: none;
+  z-index: 1;
+}
+.admin-item:hover .admin-item-description {
+  opacity: 1;
+  transform: translateY(0);
+}
+.controls {
+  bottom: 10px;
+  left: 10px;
+  width: 100%;
+  position: absolute;
+  display: flex;
+}
+.admin-item-edit {
+  cursor: pointer;
+  /* margin: 0 5px; */
+  width: 35px;
+  height: 35px;
+  border: none;
+  background: url("src/assets/icons/edit.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: all 0.5s;
+}
+.admin-item-edit:hover {
+  transform: scale(1.5);
+}
+.admin-item-delete {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  background: url("src/assets/icons/delete.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: all 0.5s;
+  /* align-self: flex-end; */
+  justify-self: flex-end;
+}
+.admin-item-delete:hover {
+  transform: scale(1.5);
+}

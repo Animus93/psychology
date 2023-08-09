@@ -1,0 +1,68 @@
+<div class="admin-faq-container">
+    <h1 class="admin-faq-title" (click)="toggle()">Вопрос-ответ</h1>
+    <div class="admin-faq-content" *ngIf="visible">
+      <form
+      class="admin-info-content-item-add"
+      [formGroup]="applyForm"
+      (submit)="createInfo()"
+    >
+      <label class="admin-info-content-item-add-name">Вопрос</label>
+      <input
+        formControlName="title"
+        [class.invalid]="
+          applyForm.controls.title.errors && applyForm.controls.title.touched
+        "
+        class="admin-info-content-item-add-content-title"
+        placeholder="Вопрос"
+      />
+      <label class="admin-info-content-item-add-name">Ответ</label>
+      <textarea
+        class="admin-info-content-item-add-content"
+        formControlName="description"
+        [class.invalid]="
+          applyForm.controls.description.errors &&
+          applyForm.controls.description.touched
+        "
+      >
+      </textarea>
+      <input
+        class="submit"
+        value="Сохранить"
+        type="submit"
+        [class.invalid-submit]="applyForm.invalid"
+        [disabled]="applyForm.invalid"
+      />
+    </form>
+  
+    <div
+      *ngFor="let item of faqSubject$ | async"
+      class="admin-info-content-item-add"
+    >
+      <button class="delete" (click)="deleteBlok(item.id)"></button>
+      <label class="admin-info-content-item-add-name">Вопрос</label>
+      <input
+        class="admin-info-content-item-add-content-title"
+        [(ngModel)]="item.question"
+        [class.invalid]="item.question.length <1"
+        placeholder="Вопрос"
+      />
+      <label class="admin-info-content-item-add-name">Ответ</label>
+      <textarea
+        class="admin-info-content-item-add-content"
+        [class.invalid]="item.answer.length <1"
+        [(ngModel)]="item.answer"
+      ></textarea>
+      <input
+        class="submit"
+        value="Сохранить"
+        type="submit"
+        [class.invalid-submit]="
+          !(item.question.length > 1 && item.question.length > 1)
+        "
+        [disabled]="!(item.question.length > 1 && item.question.length > 1)"
+        (click)="editInfo(item)"
+      />
+    </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,131 @@
+.item-edit-form-content {
+  width: 260px;
+  height: 720px;
+  background-color: rgb(243, 238, 227);
+  margin-top: 50px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 45% auto;
+  grid-template-columns: 100%;
+  padding: 10px;
+  gap: 10px;
+  position: relative;
+  z-index: 1111;
+}
+.item-img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 15px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 5px;
+  align-items: center;
+}
+.item-img-input {
+  grid-row: 2/3;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  width: 250px;
+}
+.item-edit-form-price {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  width: 250px;
+}
+.item-edit-form-title {
+  display: block;
+  width: 250px;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+.item-img-input-blok {
+  position: relative;
+  width: 250px;
+}
+.icon {
+  position: absolute;
+  right: -10px;
+  top: -18px;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.527);
+  transition: all 0.5s;
+}
+.icon:hover {
+  color: rgb(182, 3, 3);
+}
+.item-edit-form-description {
+  resize: none;
+  width: 100%;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  height: 90%;
+}
+.submit {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 15px 10px;
+  border-radius: 10px;
+  background-color: #5b97d3;
+  color: aliceblue;
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.25) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0.25) 75%,
+    transparent 75%,
+    transparent
+  );
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.submit-invalid {
+  background-color: #7e7e7e;
+}
+.submit:hover {
+  transform: scale(1.1);
+}
+.invalid {
+  border: 1px solid red;
+}
+.close-modal {
+  width: 70px;
+  height: 30px;
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  background: url("src/assets/icons/close.png");
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.close-modal:hover {
+  transform: scale(1.2);
+}
+@media (max-width: 350px) {
+  .item-edit-form-content {
+    width: 100vw;
+    padding: 0;
+  }
+}

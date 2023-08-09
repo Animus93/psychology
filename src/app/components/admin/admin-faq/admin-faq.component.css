@@ -1,0 +1,129 @@
+.admin-faq-container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  /* gap: 10px; */
+  flex-direction: column;
+}
+.admin-faq-title {
+  display: flex;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  font-family: "Exo 2", sans-serif;
+  font-size: 25px;
+  height: 60px;
+  width: 90%;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.admin-faq-title:hover {
+  box-shadow: 1px 1px 13px rgba(142, 144, 243, 0.9);
+}
+.admin-faq-content {
+  width: 100%;
+  /* height: fit-content; */
+  height: fit-content;
+  grid-template-rows: repeat(auto-fill, minmax(fit-content));
+  display: grid;
+  padding: 30px 0;
+  grid-row-gap: 25px;
+  grid-column-gap: 15px;
+  /* justify-content: center; */
+}
+.admin-info-content-item-add {
+  padding: 15px;
+  height: fit-content;
+  max-height: 500px;
+  width: 85%;
+  border-radius: 10px;
+  display: flex;
+  justify-self: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(248, 185, 103, 0.295);
+  transition: all 0.5s;
+  position: relative;
+}
+.admin-info-content-item-add:hover {
+  background-color: rgba(248, 185, 103, 0.733);
+}
+.admin-info-content-item-add-name {
+  font-family: "Exo 2", sans-serif;
+  font-weight: bold;
+  padding: 6px 0;
+}
+.admin-info-content-item-add-content-title {
+  width: 90%;
+  font-family: "Exo 2", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+.admin-info-content-item-add-content {
+  resize: vertical;
+  width: 90%;
+  height: 100%;
+  font-family: "Exo 2", sans-serif;
+  font-size: 24px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+}
+.submit {
+  margin-top: 7px;
+  width: 100px;
+  border-radius: 10px;
+  padding: 13px 0;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  border: none;
+  background-color: #93ccf2;
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.25) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0.25) 75%,
+    transparent 75%,
+    transparent
+  );
+  font-family: "Exo 2", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.699);
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+.submit:hover {
+  transform: scale(1.1);
+}
+.invalid-submit {
+  background-color: #8a8a8a;
+}
+.invalid-submit:hover {
+  transform: none;
+}
+.invalid {
+  border: 1px solid red;
+}
+.delete {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background: url("src/assets/icons/delete.svg");
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 0.3s ease-in-out;
+}
+.delete:hover {
+  transform: scale(1.4);
+}

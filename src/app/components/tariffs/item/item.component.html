@@ -1,0 +1,8 @@
+<div class="item">
+  <div class="item__icon" [ngStyle]="{ 'background-image': getImg() }"></div>
+  <h3 class="item__title">{{ item.title | maxLength : 35 }}</h3>
+  <p class="item__description">{{ item.description | maxLength : 200 }}</p>
+  <p class="item__duration">Длительность: {{item.time}} минут</p>
+  <p class="item__price"><span>Цена</span>: {{ item.price }} &#8381;</p>
+  <button (click)="createOrder()" class="item___buy">Заказать</button>
+</div>

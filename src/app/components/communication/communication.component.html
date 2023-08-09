@@ -1,0 +1,84 @@
+<div class="container">
+  <div class="review-form">
+    <h1 class="review-form-title">
+      Остались вопросы? <br />
+      Заполни форму, чтобы получить ответ
+    </h1>
+    <form
+      class="review-form-blok"
+      [formGroup]="applyForm"
+      (submit)="submitApplication()"
+    >
+      <div class="review-form-name">
+        <label class="title" [class.invalid-title]="checkField('name')"
+          >Ваше Имя</label
+        >
+        <input
+          class="review-form-name-input"
+          type="text"
+          maxlength="30"
+          formControlName="name"
+          [class.invalid]="checkField('name')"
+        />
+        <label
+          class="notification"
+          *ngIf="
+            applyForm.controls.name.errors && applyForm.controls.name.touched
+          "
+          >Введите от 3 до 20 символов</label
+        >
+      </div>
+      <div class="review-form-name">
+        <label class="title" [class.invalid-title]="checkField('contact')"
+          >Телефон\Телеграмм</label
+        >
+        <input
+          class="review-form-name-input"
+          maxlength="30"
+          formControlName="contact"
+          [class.invalid]="checkField('contact')"
+        />
+        <label
+          class="notification"
+          *ngIf="
+            applyForm.controls.contact.errors &&
+            applyForm.controls.contact.touched
+          "
+          >Введите от 3 до 20 символов</label
+        >
+      </div>
+      <div class="review-form-review">
+        <label class="title2" [class.invalid-title]="checkField('review')"
+          >Вопрос</label
+        >
+        <textarea
+          class="review-form-name-review"
+          type="text"
+          maxlength="150"
+          [class.invalid]="checkField('review')"
+          formControlName="review"
+        ></textarea>
+        <label class="review-form-name-review-info"
+          >Осталось символов: {{ descriptionLength }}</label
+        >
+        <label
+          class="notification"
+          *ngIf="
+            applyForm.controls.review.errors &&
+            applyForm.controls.review.touched
+          "
+          >Введите от 4 до 150 символов</label
+        >
+      </div>
+      <button
+        class="form-submit"
+        [class.invalid-submit]="applyForm.invalid"
+        type="submit"
+        [disabled]="applyForm.invalid"
+      >
+        Отправить
+      </button>
+    </form>
+  </div>
+  <div class="container-wave-buttom"></div>
+</div>

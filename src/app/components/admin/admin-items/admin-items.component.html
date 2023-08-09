@@ -1,0 +1,24 @@
+<div class="admin-items-container">
+    <h1 class="admin-items-title" (click)="toggle()">Товары</h1>
+    <div class="admin-items-content" *ngIf="visible">
+      <div class="admin-item-add" (click)="addItem()">
+        <span class="icon"></span>
+      </div>
+      <div class="admin-item" *ngFor="let item of items$ | async">
+        <div
+          class="admin-item-img"
+          [ngStyle]="{ 'background-image': getImg(item.img) }"
+        ></div>
+        <p class="admin-item-title">{{ item.title | maxLength : 35 }}</p>
+        <p class="admin-item-price">Цена: {{ item.price }} рублей</p>
+        <div class="admin-item-description">
+          {{ item.description | maxLength : 200 }}
+        </div>
+        <div class="controls">
+          <button class="admin-item-edit" (click)="editItem(item)"></button>
+          <button class="admin-item-delete" (click)="deleteItem(item)"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

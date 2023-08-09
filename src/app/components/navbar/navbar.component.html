@@ -1,0 +1,90 @@
+<div
+  [ngClass]="
+    modalType
+      ? 'content__navigation__wrapper-modal'
+      : 'content__navigation__wrapper'
+  "
+>
+  <ul
+    [ngClass]="modalType ? 'content__navigation-modal' : 'content__navigation'"
+  >
+    <li (click)="modalType ? modal.switchVisibility() : null">
+      <a
+        [ngClass]="
+          modalType
+            ? 'content__navigation__item-modal'
+            : 'content__navigation__item'
+        "
+        [routerLink]="['']"
+        fragment="info"
+      >
+        О консультации
+      </a>
+    </li>
+    <li (click)="modalType ? modal.switchVisibility() : null">
+      <a
+        [ngClass]="
+          modalType
+            ? 'content__navigation__item-modal'
+            : 'content__navigation__item'
+        "
+        [routerLink]="['']"
+        fragment="plan"
+        >План действий</a
+      >
+    </li>
+    <!-- <li (click)="modalType ? modal.switchVisibility() : null">
+      <a
+        [ngClass]="
+          modalType
+            ? 'content__navigation__item-modal'
+            : 'content__navigation__item'
+        "
+        [routerLink]="['']"
+        fragment="tariffs"
+        >Тарифы</a
+      >
+    </li> -->
+    <li (click)="modalType ? modal.switchVisibility() : null">
+      <a
+        [ngClass]="
+          modalType
+            ? 'content__navigation__item-modal'
+            : 'content__navigation__item'
+        "
+        [routerLink]="['']"
+        fragment="faq"
+        >Вопрос-ответ</a
+      >
+    </li>
+    <li (click)="modalType ? modal.switchVisibility() : null">
+      <a
+        [ngClass]="
+          modalType
+            ? 'content__navigation__item-modal'
+            : 'content__navigation__item'
+        "
+        [routerLink]="['']"
+        fragment="communication"
+        >Обратная связь</a
+      >
+    </li>
+    <li (click)="modalType ? modal.switchVisibility() : null">
+      <a
+        [ngClass]="
+          modalType
+            ? 'content__navigation__item-modal'
+            : 'content__navigation__item'
+        "
+        [routerLink]="['']"
+        fragment="about"
+        >обо мне</a
+      >
+    </li>
+  </ul>
+  <a [routerLink]="['']" fragment="tariffs" class="content__navigation__button"
+    >Выбрать&nbsp;тариф</a
+  >
+</div>
+
+<!-- class="content__navigation__wrapper" -->

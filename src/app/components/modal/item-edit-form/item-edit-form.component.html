@@ -1,0 +1,66 @@
+<div class="item-edit-form-content">
+  <div class="item-img" [ngStyle]="{ 'background-image': getUrl() }"></div>
+  <form [formGroup]="applyForm" (submit)="submitApplication()">
+    <label>ссылка на картинку</label>
+    <div class="item-img-input-blok">
+      <input
+        class="item-img-input"
+        placeholder="ссылка на картинку"
+        formControlName="url"
+        [(ngModel)]="applyForm.value.url"
+        [class.invalid]="
+          applyForm.controls.url.errors && applyForm.controls.url.touched
+        "
+      />
+      <label class="icon" (click)="clear()"> стереть</label>
+    </div>
+    <label>Заголовок:</label>
+    <input
+      class="item-edit-form-title"
+      formControlName="title"
+      [(ngModel)]="applyForm.value.title"
+      [class.invalid]="
+        applyForm.controls.title.errors && applyForm.controls.title.touched
+      "
+    />
+    <label>Цена:</label>
+    <input
+      class="item-edit-form-price"
+      type="number"
+      formControlName="price"
+      [(ngModel)]="this.applyForm.value.price"
+      [class.invalid]="
+        applyForm.controls.price.errors && applyForm.controls.price.touched
+      "
+    />
+    <label>Время:</label>
+    <input
+      class="item-edit-form-price"
+      type="number"
+      formControlName="time"
+      [(ngModel)]="this.applyForm.value.time"
+      [class.invalid]="
+        applyForm.controls.time.errors && applyForm.controls.time.touched
+      "
+    />
+    <label>Описание:</label>
+    <textarea
+      class="item-edit-form-description"
+      formControlName="description"
+      [(ngModel)]="this.applyForm.value.description"
+      [class.invalid]="
+        applyForm.controls.description.errors &&
+        applyForm.controls.description.touched
+      "
+    ></textarea>
+    <button
+      class="submit"
+      type="submit"
+      [disabled]="applyForm.invalid"
+      [class.submit-invalid]="applyForm.invalid"
+    >
+      Сохранить
+    </button>
+  </form>
+  <button class="close-modal" (click)="closeModal()"></button>
+</div>

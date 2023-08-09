@@ -1,0 +1,30 @@
+<div class="FAQ-container">
+  <div class="FAQ-content">
+    <h1 class="FAQ-container-title">Вопрос-ответ</h1>
+    <div
+      class="FAQ-item"
+      (click)="item.isActive = !item.isActive"
+      *ngFor="let item of faqBlok$ | async"
+    >
+      <div class="FAQ-title-blok">
+        <h3 class="FAQ-title">
+          {{ item.question }}
+        </h3>
+        <img
+          class="icon"
+          [src]="
+            item.isActive
+              ? 'assets/icons/btn up.svg'
+              : 'assets/icons/btn down.svg'
+          "
+        />
+      </div>
+      <div
+        [ngClass]="item.isActive ? 'FAQ-description' : 'FAQ-description-closed'"
+      >
+        {{ item.answer }}
+      </div>
+      <hr />
+    </div>
+  </div>
+</div>

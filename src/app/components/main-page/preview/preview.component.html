@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="content">
+    <h1 [@fadeInAnimationTitle] class="title">
+      Психологическая<br />консультация
+    </h1>
+    <div class="content__buttons">
+      <a [routerLink]="['']" fragment="tariffs">
+        <button [@fadeInAnimationButton1] class="button__buy">
+          Купить от {{ price }} &#8381;
+        </button>
+      </a>
+      <a [routerLink]="['']" fragment="plan">
+        <button [@fadeInAnimationButton2] class="button__description">
+          Узнать подробности
+        </button>
+      </a>
+    </div>
+  </div>
+  <div class="container-wave-buttom"></div>
+</div>

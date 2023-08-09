@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="content">
+    <h1 class="title">Тарифы</h1>
+    <div *ngIf="data$ | async as items" class="items">
+      <app-item *ngFor="let item of items" [item]="item"></app-item>
+    </div>
+  </div>
+</div>

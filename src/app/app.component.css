@@ -1,0 +1,42 @@
+.container {
+  display: grid;
+  padding: 0;
+  margin: 0;
+  grid-template-columns: 100%;
+  justify-content: center;
+  position: relative;
+}
+/* .hideModal {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.showModal {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
+} */
+.link-top {
+  width: 50px;
+  bottom: 70px;
+  right: 15px;
+  display: inline-block;
+  position: fixed;
+  z-index: 2;
+  background-color: rgba(240, 248, 255, 0.733);
+  border: 3px solid black;
+  border-radius: 10px;
+  transition: all 0.6s;
+  cursor: pointer;
+}
+.link-top:hover {
+  background-color: rgb(240, 248, 255);
+  border: 3px solid #e04873;
+  scale: 1.1;
+}
+.notification {
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

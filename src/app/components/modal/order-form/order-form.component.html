@@ -1,0 +1,68 @@
+<p>order-form works!</p>
+<div class="modal-content-form">
+    <h1 class="modal-title">Заказать консультацию</h1>
+    <button class="close-modal" (click)="closeModal()"></button>
+    <form
+      class="modal-form-blok"
+      [formGroup]="applyForm"
+      (submit)="submitApplication()"
+    >
+      <div class="modal-contact-blok">
+        <label class="modal-contact-title">
+          <label>*</label>Номер телефона/телеграмм для связи
+        </label>
+        <textarea
+          class="modal-contact-input"
+          onkeydown="return (event.keyCode >= 48 && event.keyCode <= 57) || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40"
+          maxlength="14"
+          formControlName="contact"
+          [class.invalid]="
+            applyForm.controls.contact.errors &&
+            applyForm.controls.contact.touched
+          "
+        ></textarea>
+      </div>
+  
+      <div class="modal-contact-blok">
+        <label class="modal-contact-title"> <label>*</label>Ваше имя</label>
+        <textarea
+          class="modal-contact-input"
+          formControlName="name"
+          [class.invalid]="
+            applyForm.controls.name.errors && applyForm.controls.name.touched
+          "
+        ></textarea>
+        <label
+          *ngIf="
+            applyForm.controls.name.errors && applyForm.controls.name.touched
+          "
+          class="modal-contact-error"
+        >
+          Минимум 3 символа
+        </label>
+      </div>
+  
+      <div class="modal-caption-blok">
+        <label class="modal-caption-title"
+          >Коментраий
+          <label class="modal-caption-title-notification">
+            (не обязательно)
+          </label></label
+        >
+        <textarea
+          class="modal-caption-input"
+          formControlName="caption"
+        ></textarea>
+      </div>
+      <button
+        class="modal-submit"
+        [class.invalid-submit]="applyForm.invalid"
+        [disabled]="applyForm.invalid"
+        type="submit"
+      >
+        Отправить
+      </button>
+    </form>
+    <div class="card-img" [ngStyle]="{ 'background-image': getImg() }"></div>
+  </div>
+  

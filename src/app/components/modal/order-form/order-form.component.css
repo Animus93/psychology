@@ -1,0 +1,161 @@
+.modal-content-form {
+  margin: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100px;
+  width: fit-content;
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 0.945);
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 30px auto;
+  grid-template-columns: 50% 50%;
+  padding: 10px;
+  position: fixed;
+}
+.card-img {
+  width: 270px;
+  height: 330px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: 0.5s ease-in-out;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  margin: 10px;
+  grid-row: 2/3;
+  grid-column: 2/3;
+  align-self: center;
+}
+.modal-title {
+  padding-top: 7px;
+  font-family: "Exo 2", sans-serif;
+  justify-self: center;
+  grid-row: 1/2;
+  grid-column: 1/-1;
+}
+.modal-form-blok {
+  font-family: "Exo 2", sans-serif;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 22% 22% auto 13%;
+}
+.modal-contact-blok {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+}
+.modal-contact-title {
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+.modal-contact-title::first-letter {
+  color: red;
+}
+.modal-contact-input {
+  border: 1px solid rgba(0, 0, 0, 0.384);
+  border-radius: 5px;
+  font-size: 15px;
+  padding-left: 4px;
+  padding-top: 7px;
+  padding-bottom: 0;
+  width: 250px;
+  height: 15x;
+  resize: none;
+  overflow: hidden;
+}
+.modal-contact-error {
+  color: red;
+  font-size: 12px;
+  padding-top: 5px;
+}
+.modal-caption-blok {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.modal-caption-title {
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+.modal-caption-title-notification {
+  color: rgba(0, 0, 0, 0.466);
+}
+.modal-caption-input {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  resize: none;
+  font-size: 14px;
+}
+.modal-submit {
+  align-self: flex-start;
+  justify-self: center;
+  width: 100px;
+  border-radius: 10px;
+  padding: 13px 0;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  border: none;
+  background-color: #e04873;
+  font-family: "Exo 2", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.699);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+.modal-submit:hover {
+  transform: scale(1.1);
+}
+.invalid-submit {
+  background-color: #8a8a8a;
+}
+.invalid-submit:hover {
+  transform: none;
+}
+.invalid {
+  border-color: red;
+}
+.close-modal {
+  width: 70px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  top: 5px;
+  background: url("src/assets/icons/close.png");
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.close-modal:hover {
+  transform: scale(1.2);
+}
+@media (max-width: 660px) {
+  .modal-content {
+    width: 300px;
+    margin-top: 5vh;
+    height: 750px;
+    grid-template-rows: 30px 40% auto;
+  }
+  .card-img {
+    margin: 0 auto;
+    width: 270px;
+    height: 300px;
+    grid-row: 2/3;
+    grid-column: 1/-1;
+  }
+  .modal-form-blok {
+    grid-column: 1/-1;
+  }
+  .modal-caption-input {
+    grid-column: 1/-1;
+    width: 100%;
+  }
+  .modal-contact-blok {
+    padding-top: 8px;
+  }
+}
