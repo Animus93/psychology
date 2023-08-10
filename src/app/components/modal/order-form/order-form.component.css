@@ -12,6 +12,9 @@
   grid-template-columns: 50% 50%;
   padding: 10px;
   position: fixed;
+  /* background-color: rgba(0, 0, 0, 0.829); */
+  /* border-radius: 40px; */
+  /* color: #fff; */
 }
 .card-img {
   width: 270px;
@@ -157,5 +160,10 @@
   }
   .modal-contact-blok {
     padding-top: 8px;
+  }
+}
+@media (max-width: 360px) {
+  .modal-content-form{
+    width: 100%;
   }
 }

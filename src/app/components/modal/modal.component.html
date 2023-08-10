@@ -7,7 +7,11 @@
   <div class="navigation-wrapper" *ngIf="modal.getType() === 'navigation'">
     <app-navbar [modalType]="true"></app-navbar>
   </div>
-  <div class="skills-wrapper" *ngIf="modal.getType() === 'skills'">
+  <div
+    (mouseup)="modal.switchVisibility()"
+    class="skills-wrapper"
+    *ngIf="modal.getType() === 'skills'"
+  >
     <ul class="skills">
       <li>Клиническая психология (Московский Институт Психоанализа)</li>
       <li>

@@ -25,6 +25,7 @@ export class OrderFormComponent {
   }
   closeModal() {
     this.modal.setType('');
+    this.modal.switchVisibility()
   }
 
   applyForm = new FormGroup({
@@ -54,7 +55,7 @@ export class OrderFormComponent {
         if (response.ok) {
           this.notification.swithcVisible();
           this.notification.setData(
-            'заказ принят в ближайщее время мы свяжемся с вами'
+            'Заказ принят в ближайщее время мы свяжемся с вами'
           );
           this.modal.setType('');
         }

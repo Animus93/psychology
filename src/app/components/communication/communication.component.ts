@@ -69,7 +69,7 @@ export class CommunicationComponent {
           if (response.ok) {
             this.applyForm.reset();
             this.notification.swithcVisible();
-            this.notification.setData('в ближайщее время я свяжусь с вами');
+            this.notification.setData('В ближайщее время я свяжусь с вами');
           }
         });
         this.subscriptions.add(sendMessage$);
