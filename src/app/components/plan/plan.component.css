@@ -23,7 +23,7 @@
   padding: 40px 0;
 }
 .description {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
 }
 span {
@@ -42,13 +42,14 @@ span {
   column-gap: 10px;
 }
 .step {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 24px;
   grid-row: 1/2;
   grid-column: 1/2;
+  font-weight: 600;
 }
 .plan-item__content__titile {
-  font-size: 24px;
+  font-size: 17px;
   line-height: 32px;
   grid-row: 1/2;
   grid-column: 3/4;
@@ -77,6 +78,9 @@ li {
     grid-template-columns: 100%;
     grid-template-rows: fit-content fit-content auto 5px;
     row-gap: 20px;
+  }
+  .step{
+    text-align: center;
   }
   .dot {
     grid-row: 4/5;
